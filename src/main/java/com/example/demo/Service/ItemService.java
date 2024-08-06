@@ -10,8 +10,11 @@ import java.util.List;
 @Service
 public class ItemService implements ItemInterface {
 
-    private List<Item> items = new ArrayList<>();
-
+    private List<Item> items = new ArrayList<Item>() {{
+        add(new Item(1, "Item1", "Item1 is here"));
+        add(new Item(2, "Item2", "Item2 is here"));
+        add(new Item(3, "Item3", "Item3 is here"));
+    }};
 
     @Override
     public Item addItem(Item item) {

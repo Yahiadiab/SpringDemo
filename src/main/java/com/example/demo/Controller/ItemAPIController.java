@@ -27,10 +27,10 @@ public class ItemAPIController {
 
     }
 
-    @GetMapping
-    public Item getItemById(@RequestParam int id) {
-        return itemService.getItemById(id);
 
+    @GetMapping("/{id}")
+    public Item getItemById(@PathVariable int id) {
+        return itemService.getItemById(id);
     }
 
     @DeleteMapping ("/{ItemId}")
